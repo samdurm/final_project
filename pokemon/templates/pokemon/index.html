@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block css_files %} 
+	<link rel="stylesheet" href="{% static "pokemon/index.css" %}">
+	<link rel="stylesheet" href="{% static "pokemon/includes/header.css" %}">
+{% endblock %}
+
+{% block content %} 
+	{% include "pokemon/includes/header.html" %}
+	<h1>Pokemon!</h1>
+{% endblock %} 

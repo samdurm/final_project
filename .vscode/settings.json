@@ -1,0 +1,9 @@
+// Add for python/template syntax support 
+{
+	"python.pythonPath": "/usr/local/bin/python3",
+	"files.associations": {
+		"**/*.html": "html",
+		"**/templates/**/*.html": "django-html",
+		"**/requirements/{/**,*}.{txt,in}": "pip-requirements"
+	}
+}
