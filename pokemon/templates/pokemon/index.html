@@ -2,11 +2,13 @@
 {% load static %} 
 
 {% block css_files %} 
+	<link rel="stylesheet" href="{% static "pokemon/includes/nav.css" %}">
 	<link rel="stylesheet" href="{% static "pokemon/index.css" %}">
-	<link rel="stylesheet" href="{% static "pokemon/includes/header.css" %}">
 {% endblock %}
 
 {% block content %} 
-	{% include "pokemon/includes/header.html" %}
-	<h1>Pokemon!</h1>
+	<header class="hero">
+		<h1>Usable AI</h1>
+		<h2>With Pokemon</h2>
+	</header>
 {% endblock %} 

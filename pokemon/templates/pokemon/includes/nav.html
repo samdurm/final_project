@@ -1,0 +1,23 @@
+{% load static %} 
+<label>
+	<nav id="sidebar-menu">
+		<img class="logo" src="{% static 'images/logo.png' %}" alt="Pokeball Logo">
+		<ul>
+			<li class="menu-item"><a href="{% url 'index' %}">Home</a></li>
+			<li class="menu-item">About</li>
+			<li class="menu-item">Trainers</li>
+			<li class="menu-item">Battle</li>
+		</ul>
+		<div class="menu-btn">
+			<div class="menu-btn_burger"></div>
+		</div>
+	</nav>
+</label>
+<script>
+	// if clicked again, toggle this effect by removing the 'show' class
+	function toggleDropdown() {
+		document.querySelectorAll('.menu-item').forEach(item => item.classList.toggle('show'));
+	}
+	// On the element with the class menu-button, wait for it to be clicked, then toggle the dropdown
+	document.querySelector('.menu-button').addEventListener('click', toggleDropdown);
+</script>
