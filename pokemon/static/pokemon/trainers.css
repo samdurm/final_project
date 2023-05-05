@@ -1,0 +1,19 @@
+body {
+	padding: 0; 
+	margin: 0; 
+}
+
+.trainers {
+	margin-top: 7.5rem;
+	display: flex; 
+	flex-flow: column nowrap;
+	justify-content: justify-content;
+} 
+
+.trainer-classes {
+	width: 80%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+}

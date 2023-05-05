@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block title %} 
+	Trainers
+{% endblock %}
+
+{% block css_files %} 
+	<link rel="stylesheet" href="{% static "pokemon/trainers.css" %}">
+{% endblock %}
+
+{% block content %} 
+	<main class="trainers">
+		<h1>Trainer Classes</h1>
+		<div class="trainer-classes">
+			<div class="beauty-trainer">
+				<h3>Beauty Trainer</h3>
+			</div>
+			<div class="biker-trainer">
+				<h3>Biker Trainer</h3>
+			</div>
+			{% comment %} {% for row in trainer_classes %} 
+				<div class="beauty">
+					<h3>Beauty Trainer</h3>
+					{% if row.0 == 'beauty' %}
+					{% endif %}
+				</div>
+				<div class="biker">
+					<h3>Biker Trainer</h3>
+					{% if row.0 == 'biker' %}
+					{% endif %}
+				</div>
+			{% endfor %} {% endcomment %}
+		</div>
+	</main>
+{% endblock %} 

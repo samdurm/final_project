@@ -1,3 +1,51 @@
 from django.db import models
+from django.utils.translation import gettext as _
 
 # Create your models here.
+
+# Cite: https://www.youtube.com/watch?v=vs6dXL9Wp7s
+class Pokemon (models.Model):
+	id = models.BigAutoField(primary_key=True)
+	against_bug = models.FloatField(_("Against_bug"))
+	against_dark = models.FloatField(_("Against_dark"))
+	against_dragon = models.FloatField(_("Against_dragon"))
+	against_electric = models.FloatField(_("Against_electric"))
+	against_fairy = models.FloatField(_("Against_fairy"))
+	against_fight = models.FloatField(_("Against_fight"))
+	against_fire = models.FloatField(_("Against_fire"))
+	against_flying = models.FloatField(_("Against_flying"))
+	against_ghost = models.FloatField(_("Against_ghost"))
+	against_grass = models.FloatField(_("Against_grass"))
+	against_ground = models.FloatField(_("Against_ground"))
+	against_ice = models.FloatField(_("Against_ice"))
+	against_normal = models.FloatField(_("Against_normal"))
+	against_poison = models.FloatField(_("Against_poison"))
+	against_psychic = models.FloatField(_("Against_psychic"))
+	against_rock = models.FloatField(_("Against_rock"))
+	against_steel = models.FloatField(_("Against_steel"))
+	against_water = models.FloatField(_("Against_water"))
+	attack = models.IntegerField(_("Attack"))
+	base_total = models.IntegerField(_("Base_total"))
+	capture_rate = models.IntegerField(_("Capture_rate"))
+	defense = models.IntegerField(_("Defense"))
+	height_m = models.FloatField(_("Height_m"))
+	hp = models.IntegerField(_("Hp"))
+	name = models.CharField(_("Name"), max_length=255)
+	pokedex_number = models.IntegerField(_("Pokedex_number"))
+	sp_attack = models.IntegerField(_("Sp_attack"))
+	sp_defense = models.IntegerField(_("Sp_defense"))
+	speed = models.IntegerField(_("Speed"))
+	type1 = models.CharField(_("Type1"), max_length=255)
+	type2 = models.CharField(_("Type2"), max_length=255)
+	weight_kg = models.FloatField(_("Weight_kg"))
+	is_legendary = models.IntegerField(_("is_legendary"))
+
+class Trainers (models.Model): 
+	id = models.BigAutoField(primary_key=True)
+	trainer_class = models.CharField(_("Class"), max_length=255)
+	pokemon1 = models.CharField(_("Pkmn1"), max_length=255)
+	pokemon2 = models.CharField(_("Pkmn2"), max_length=255)
+	pokemon3 = models.CharField(_("Pkmn3"), max_length=255)
+	pokemon4 = models.CharField(_("Pkmn4"), max_length=255)
+	pokemon5 = models.CharField(_("Pkmn5"), max_length=255)
+	pokemon6 = models.CharField(_("Pkmn6"), max_length=255)
